@@ -1,13 +1,18 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router'
+import Chat from './pages/Chat.jsx'
+import Login from './pages/Login.jsx'
+
+export const APP_NAME = 'Linkroom'
+
 function App() {
-
-
-
-
   return (
-    <>
-      <h1>This is App.jsx</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/chat" element={<Chat />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
